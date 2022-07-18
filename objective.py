@@ -1,6 +1,8 @@
 import simpy
 import random
 import statistics
+
+
 class Home(object):
     def __init__(self, env,num_furniture,robot):
         self.env = env
