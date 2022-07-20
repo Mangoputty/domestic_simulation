@@ -3,18 +3,37 @@ import random
 import statistics
 
 
-class Home(object):
-    def __init__(self, env,num_furniture,robot):
-        self.env = env
-        self.num_furniture = simpy.Resource(env, num_furniture)
-class Robot(object):
-    def __init__(self,hardness,num_limbs,min_size,max_length):
-        self.hardness=hardness #or whatever function/equation I'd use for hardness
-        self.num_limbs=num_limbs
-        self
-
-def begin(env, robot, Home):
-    arrival_time = env.now
-
-def move_across(env,num_furniture,robot)
+class Room(object):
+    def __init__(self,furniture,chargers,dirtiness):
+        self.num_furniture = furniture
+        self.dirtiness=dirtiness
+        self.chargers=chargers
     
+
+
+class Robot(object):
+    def __init__(self,width,height,charge):
+        self.width=width
+        self.height=height
+        self.charge=charge
+
+    def charge(self):
+        if chargers>0:
+            charge=100
+
+    def clean(self):
+        dirtiness-=(dirtiness-0.05)
+        charge-=0.1
+        
+
+room1=Room(random.random(),random.randint(1,5),random.random())
+
+room2=Room(random.random(),random.randint(1,5),random.random())
+
+robot=Robot(5,7,1)
+
+if charge<0.2:
+    charge.(robot)
+
+if dirtiness>0.1:
+    clean.(room)
