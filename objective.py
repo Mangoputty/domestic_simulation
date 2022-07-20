@@ -8,7 +8,7 @@ class Room(object):
         self.num_furniture = furniture
         self.dirtiness=dirtiness
         self.chargers=chargers
-    
+
 
 
 class Robot(object):
@@ -18,13 +18,13 @@ class Robot(object):
         self.charge=charge
 
     def charge(self):
-        if chargers>0:
-            charge=100
+        if room.chargers>0:
+            self.charge=100
 
     def clean(self):
-        dirtiness-=(dirtiness-0.05)
-        charge-=0.1
-        
+        room.dirtiness=room.dirtiness-(room.dirtiness-0.05)
+        charge=charge-0.1
+
 
 room1=Room(random.random(),random.randint(1,5),random.random())
 
