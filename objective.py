@@ -22,18 +22,16 @@ class Robot(object):
             self.charge=100
 
     def clean(self):
-        room.dirtiness=room.dirtiness-(room.dirtiness-0.05)
-        charge=charge-0.1
+        if charge>0.2:
+            room.dirtiness=room.dirtiness-(room.dirtiness-0.05)
+            charge=charge-0.1
+        
 
 
 room1=Room(random.random(),random.randint(1,5),random.random())
 
 room2=Room(random.random(),random.randint(1,5),random.random())
 
+room3=Room(random.random(),random.randint(1,5),random.random())
+
 robot=Robot(5,7,1)
-
-if charge<0.2:
-    charge.(robot)
-
-if dirtiness>0.1:
-    clean.(room)
