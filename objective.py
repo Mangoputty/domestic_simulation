@@ -2,6 +2,7 @@ import simpy
 import random
 import statistics
 
+env = simpy.Environment()
 
 class Room(object):
     def __init__(self,furniture,chargers,dirtiness):
@@ -35,3 +36,9 @@ room2=Room(random.random(),random.randint(1,5),random.random())
 room3=Room(random.random(),random.randint(1,5),random.random())
 
 robot=Robot(5,7,1)
+
+if self.charge<0.2:       
+    robot.charge
+
+if room.dirtiness>0.1:
+    clean.(room)
