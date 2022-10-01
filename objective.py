@@ -2,9 +2,11 @@ import simpy
 import random
 import statistics
 
+env = simpy.Environment()
 
 class Room(object):
-    def __init__(self,furniture,chargers,dirtiness):
+    def __init__(self,env,furniture,chargers,dirtiness):
+        self.env=env
         self.num_furniture = furniture
         self.dirtiness=dirtiness
         self.chargers=chargers
@@ -12,7 +14,8 @@ class Room(object):
 
 
 class Robot(object):
-    def __init__(self,width,height,charge):
+    def __init__(self,env,width,height,charge):
+        self.env=env
         self.width=width
         self.height=height
         self.charge=charge
